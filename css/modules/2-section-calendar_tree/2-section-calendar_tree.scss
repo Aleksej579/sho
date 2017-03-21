@@ -1,0 +1,67 @@
+.section-calendar_tree {
+  height: 1330px;
+  width: 100%;
+  background-color: $section-calendar_tree;
+  background-image: url(/images/calendar_tree/bacground_city.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+}
+.calendar_tree-wrapper {
+  width: 1200px;
+  height: 1330px;
+  margin: 0 auto;
+  padding-top: 50px;
+  @include display_flex_inline;
+}
+/*---tabl content-------------------------------------------------*/
+.calendar_tree-wrapper > table {margin: 0 auto;}
+
+td {vertical-align: top; height: 200px;}
+.calendar_tree-left-min {height: 100px;}
+
+.calendar_tree-left, .calendar_tree-right {
+  color: $calendar_tree-left_right;
+  font-family: 'Myriad_Pro', sans-serif;
+  font-size: 15pt;
+}
+.calendar_tree-left {text-align: right;}
+.calendar_tree-right {text-align: left;}
+.seasons {font-size: 48pt; color: white;}
+.year {font-size: 30pt; color: $year;}
+.vertical_git {width: 150px;}
+
+/*---svg img git-------------------------------------*/
+.vertical {
+  position: relative;
+  top: -50px;
+}
+
+/*---@media desctop & pl------------------------------------*/
+@media screen and (min-width:800px) and (max-width:1200px) {
+  .calendar_tree-wrapper {width: 100%; padding-top: 25px;}
+  .section-calendar_tree {height: 1330px;}
+  .calendar_tree-wrapper {width: 100%; padding-top: 25px;}
+  .calendar_tree-wrapper > table {width: 44%}
+}
+/*---@media mob------------------------------------*/
+@media screen and (min-width:320px) and (max-width:800px) {
+  .calendar_tree-wrapper {width: 100%; padding-top: 25px;}
+  .calendar_tree-wrapper > table {width: 44%}
+  .calendar_tree-left, .calendar_tree-right {font-size: 7pt;}
+  .seasons {font-size: 24pt;}
+  .year {font-size: 15pt;}
+  td {vertical-align: top; height: 110px;}
+  .calendar_tree-left-min {height: 40px;}
+  .vertical {top: -25px; height: 700px;}
+  .section-calendar_tree {height: 700px;}
+}
+
+
+
+
+
+
+
+
+

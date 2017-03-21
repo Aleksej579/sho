@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAmB;EACjB,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,OAAO",
+"sources": ["4-section-our_credo.scss"],
+"names": [],
+"file": "4-section-our_credo.css"
+}

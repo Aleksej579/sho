@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mBAAoB;EAClB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,KAAK;EACvB,UAAU,EAAE,oFACiC;EAC7C,iBAAiB,EAAE,SAAS;EAC5B,eAAe,EAAE,QAAQ",
+"sources": ["1-section-main_start.scss"],
+"names": [],
+"file": "1-section-main_start.css"
+}

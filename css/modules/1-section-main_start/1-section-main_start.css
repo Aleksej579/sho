@@ -1,0 +1,9 @@
+.section-main_start {
+  height: 950px;
+  width: 100%;
+  background-color: white;
+  background: url(/images/main_start/head_left.png), url(/images/main_start/head_right.png) 100% 0;
+  background-repeat: no-repeat;
+  background-size: 30% auto; }
+
+/*# sourceMappingURL=1-section-main_start.css.map */

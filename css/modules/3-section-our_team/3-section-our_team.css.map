@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAkB;EAChB,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,KAAK",
+"sources": ["3-section-our_team.scss"],
+"names": [],
+"file": "3-section-our_team.css"
+}

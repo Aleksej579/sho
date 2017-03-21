@@ -1,0 +1,59 @@
+.section-our_team {
+  height: 1000px;
+  width: 100%;
+  background-color: white;
+}
+.article-our_team-wrapper {
+  width: 1200px;
+  height: 1330px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.article-our_team-wrapper > p {
+  margin: 0 auto;
+  text-align: center;
+}
+.our_team_32 {
+  font-size: 32pt; color: $our_team_32;
+  font-family: 'Myriad_Pro', sans-serif;
+}
+.our_team_16 {
+  font-size: 16pt; color: $our_team_16;
+  font-family: 'Myriad_Pro', sans-serif;
+}
+/*--3 person------------------------------------------------------*/
+.team_wrapper-include {
+  width: 100%;
+  @include display_flex;
+}
+.team_wrapper_left,
+.team_wrapper_center,
+.team_wrapper_right {
+  text-align: center;
+  margin: auto;
+}
+.team_wrapper_left, .team_wrapper_right {
+  padding-top: 200px;
+}
+.team_master {
+  font-size: 24pt; color: $team_master;
+  font-family: 'Myriad_Pro', sans-serif;
+}
+.team_soft {
+  font-size: 13pt; color: $team_soft;
+  font-family: 'Myriad_Pro', sans-serif;
+}
+.twitter, .instagram {color: $twitter_instagram;}
+.twitter:hover, .instagram:hover {color: $twitter_instagram-hover;}
+
+
+
+/*---@media desctop & pl------------------------------------*/
+@media screen and (min-width:800px) and (max-width:1200px) {
+  .article-our_team-wrapper {width: 100%;}
+}
+/*---@media mob------------------------------------*/
+@media screen and (min-width:320px) and (max-width:800px) {
+  .article-our_team-wrapper {width: 100%; padding-top: 25px;}
+  .team_wrapper_left, .team_wrapper_right { padding-top: 0;}
+}

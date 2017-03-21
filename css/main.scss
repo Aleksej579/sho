@@ -1,0 +1,20 @@
+/*import*/
+@import "import/fonts/fonts";
+@import "import/var-color/var-color";
+/*modules*/
+@import "modules/1-section-main_start/1-section-main_start";
+@import "modules/2-section-calendar_tree/2-section-calendar_tree";
+@import "modules/3-section-our_team/3-section-our_team";
+@import "modules/4-section-our_credo/4-section-our_credo";
+@import "modules/5-section-contact_us/5-section-contact_us";
+/*base*/
+/*@import "base/textarea/textarea";
+@import "base/button/button";*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+

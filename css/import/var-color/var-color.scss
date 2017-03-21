@@ -1,0 +1,151 @@
+/*---local palette--------------------------------------------------*/
+$color-dark: #1d1e1f;
+$color-dark_grey: #464646;
+$color-light_grey: #b3b3b3;
+$color-white: white;
+$color-oliv: #d8ec54;
+
+/*---global palette-------------------------------------------------*/
+$bg_section_black: $color-dark;
+$bg_section_white: $color-white;
+
+$text_black: $color-dark;
+$text_gray: $color-dark_grey;
+$text_white: $color-light_grey;
+
+$hovet: $color-oliv;
+
+$nav: $color-light_grey;
+$logo_site-beeg: $color-dark;
+$logo_site-small: $color-light_grey;
+$main_start-btn: $color-dark;
+
+$section-calendar_tree: $color-dark;
+$calendar_tree-left_right: $color-light_grey;
+$year: $color-oliv;
+
+$our_team_32: $color-dark;
+$our_team_16: $color-dark_grey;
+$team_master: $color-dark_grey;
+$team_soft: $color-light_grey;
+$twitter_instagram: $color-light_grey;
+$twitter_instagram-hover: $color-oliv;
+
+$section-our_credo: $color-dark;
+$our_credo_16: $color-dark_grey;
+$our_credo_master: $color-dark_grey;
+$our_credo_soft: $color-light_grey;
+$our_credo-btn_hover: $color-dark;
+$loreum-first_left: $color-dark_grey;
+$loreum-first_right: $color-dark_grey;
+$loreum-main_text: $color-light_grey;
+$loreum-last_left: $color-dark_grey;
+$loreum-last_right: $color-dark_grey;
+
+$contact_us_16: $color-light_grey;
+$contact_us_info: $color-light_grey;
+$write_to_us-btn: $color-dark;
+$contact_us-footer: $color-dark_grey;
+$write_us: $color-dark_grey;
+$write_us_border: $color-light_grey;
+$write_us_focus: $color-oliv;
+
+/*---mixin------------------------------------------------------------*/
+@mixin user_select ($none) {  //user select none & all
+  -webkit-user-select: $none;
+  -moz-user-select: $none;
+  -ms-user-select: $none;
+  user-select: $none;
+}
+@mixin display_flex_inline {  //@include display_flex_inline;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+@mixin display_flex {  //@include display_flex;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+@mixin angle($pseudo, $flip: false, $angle: 6.129deg) {
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    z-index: 1;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+    }
+
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 100%;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+  }
+}
+
+.edge--bottom {@include angle(after);}
+.edge--top--reverse {@include angle(before, true);}

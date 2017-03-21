@@ -1,0 +1,150 @@
+.section-main_start {
+  height: 950px;
+  width: 100%;
+  background-color: white;
+  background: url(/images/main_start/header.png) no-repeat  fixed;
+  background-position: center center;
+  background-size: cover;
+}
+.article-main_start-wrapper {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+/*---navigation--------------------------------*/
+nav {
+  overflow:hidden;
+  width: 650px;
+  margin: 0 auto;
+  @include user_select (none);
+}
+nav ul {
+  list-style: none;
+  @include display_flex;
+}
+nav ul li {
+  font-family: "RobotoRegular", sans-serif;
+  font-size: 13pt;
+  margin: auto;
+}
+nav ul li a {
+  color: $nav;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+nav ul li a:hover {
+  border-bottom: 1px solid $nav;
+  transition: 0.5s;
+}
+.nav_img {position: relative;}
+
+/*---header logo button--------------------------*/
+header {
+  width: 100%;
+  height: Calc(100% - 95px);
+  display: flex;
+  flex-direction: column;
+}
+.main_start-logo_site {
+  margin: auto;
+  text-align: center;
+  font-family: 'Myriad_Pro', sans-serif;
+}
+.logo_site-beeg {
+  color: $logo_site-beeg;
+  font-size: 44pt;
+}
+.main_word {
+  position: relative;
+  top: -30pt;
+  font-size: 32pt;
+}
+.main_word:hover {
+  color: red;
+}
+.logo_site-small {
+  color: $logo_site-small;
+  font-size: 19pt;
+}
+
+/*---btn-----------------------------------------*/
+.main_start-btn {
+  color: $main_start-btn;
+  text-transform: uppercase;
+  font-size: 13pt;
+  font-family: 'Myriad_Pro', sans-serif;
+  border: 1px solid $main_start-btn;
+  background: none;
+  transition: 0.2s linear;
+  padding: 24px;
+}
+.main_start-btn:hover {
+  color: white;
+  background-color: $main_start-btn;
+}
+
+/*---scroll----------------------------------------*/
+.scroll {
+  height: 110px;
+  width: 10px;
+  border-radius: 25px;
+  margin: 0 auto 90px auto;
+}
+.first, .next, .last {
+  height:10px;
+  width: 10px;
+  border-radius: 5px;
+  position: absolute;
+  margin-bottom: 10px;
+}
+.first {
+  background-color: #d0d0d0;
+  z-index: 100;
+
+  animation-name: anim_1;
+  animation-duration: 2s;
+  transition: ease;
+  animation-iteration-count: infinite;
+}
+.next {
+  background-color: #e0e0e0;
+  z-index: 50;
+
+  animation-name: anim_2;
+  animation-duration: 2s;
+  transition: ease;
+  animation-iteration-count: infinite;
+}
+.last {
+  background-color: #f0f0f0;
+  z-index: 1;
+  animation-name: anim_3;
+  animation-duration: 2s;
+  transition: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes anim_1 {
+  0% {transform: translateY(0px);}
+  100% {transform: translateY(100px);}
+}
+@keyframes anim_2 {
+  30% {transform: translateY(0px);}
+  100% {transform: translateY(100px);}
+}
+@keyframes anim_3 {
+  60% {transform: translateY(0px);}
+  100% {transform: translateY(100px);}
+}
+
+
+/*---@media desctop & pl------------------------------------*/
+@media screen and (min-width:800px) and (max-width:1200px) {
+
+}
+/*---@media mob------------------------------------*/
+@media screen and (min-width:320px) and (max-width:800px) {
+  .article-main_start-wrapper {width: 100%;}
+  nav {width: 100%;}
+  .section-main_start {background: none;}
+}
