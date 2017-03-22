@@ -8,13 +8,15 @@
 }
 .article-main_start-wrapper {
   height: 100%;
+  width: 1200px;
   margin: 0 auto;
 }
+
 /*---navigation--------------------------------*/
 nav {
   overflow:hidden;
   width: 650px;
-  margin: 0 auto;
+  margin: auto;
   @include user_select (none);
 }
 nav ul {
@@ -47,7 +49,7 @@ header {
 .main_start-logo_site {
   margin: auto;
   text-align: center;
-  font-family: 'Myriad_Pro', sans-serif;
+  @include ff-m_p;
 }
 .logo_site-beeg {
   color: $logo_site-beeg;
@@ -66,23 +68,7 @@ header {
   font-size: 19pt;
 }
 
-/*---btn-----------------------------------------*/
-.main_start-btn {
-  color: $main_start-btn;
-  text-transform: uppercase;
-  font-size: 13pt;
-  font-family: 'Myriad_Pro', sans-serif;
-  border: 1px solid $main_start-btn;
-  background: none;
-  transition: 0.2s linear;
-  padding: 24px;
-}
-.main_start-btn:hover {
-  color: white;
-  background-color: $main_start-btn;
-}
-
-/*---scroll----------------------------------------*/
+/*---scroll animation----------------------------------------*/
 .scroll {
   height: 110px;
   width: 10px;
@@ -96,33 +82,30 @@ header {
   position: absolute;
   margin-bottom: 10px;
 }
-.first {
-  background-color: #d0d0d0;
-  z-index: 100;
 
-  animation-name: anim_1;
+@mixin anim_ {
   animation-duration: 2s;
   transition: ease;
   animation-iteration-count: infinite;
 }
+.first {
+  background-color: #d0d0d0;
+  z-index: 100;
+  animation-name: anim_1;
+  @include anim_;
+}
 .next {
   background-color: #e0e0e0;
   z-index: 50;
-
   animation-name: anim_2;
-  animation-duration: 2s;
-  transition: ease;
-  animation-iteration-count: infinite;
+  @include anim_;
 }
 .last {
   background-color: #f0f0f0;
   z-index: 1;
   animation-name: anim_3;
-  animation-duration: 2s;
-  transition: ease;
-  animation-iteration-count: infinite;
+  @include anim_;
 }
-
 @keyframes anim_1 {
   0% {transform: translateY(0px);}
   100% {transform: translateY(100px);}
@@ -137,15 +120,15 @@ header {
 }
 
 
-/*---@media 4к-------------------------------------------------*/
+/*---@media 4к-----------------------------------------------------*/
 @media screen and (min-width:2000px) and (max-width:4100px) {
   .section-main_start {height: 1700px;}
 }
-/*---@media desctop & pl------------------------------------*/
+/*---@media desctop & pl-------------------------------------------*/
 @media screen and (min-width:800px) and (max-width:1200px) {
 
 }
-/*---@media mob------------------------------------*/
+/*---@media mob----------------------------------------------------*/
 @media screen and (min-width:280px) and (max-width:800px) {
   .section-main_start {background: none;}
   .article-main_start-wrapper {width: 100%;}

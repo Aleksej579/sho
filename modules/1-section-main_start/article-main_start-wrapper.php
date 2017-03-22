@@ -1,13 +1,13 @@
 <article class="article-main_start-wrapper">
     <nav>
         <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Команда</a></li>
+            <li><a href="#anchor-main_start">Главная</a></li>
+            <li><a href="#anchor-calendar_tree">О нас</a></li>
+            <li><a href="#anchor-our_team">Команда</a></li>
             <li><img class="nav_img" src="/images/main_start/nav_midle.png" alt=""></li>
-            <li><a href="#">Услуги</a></li>
+            <li><a href="#anchor-our_credo">Услуги</a></li>
             <li><a href="#">Блог</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#anchor-contact_us">Контакты</a></li>
         </ul>
     </nav>
     <header>

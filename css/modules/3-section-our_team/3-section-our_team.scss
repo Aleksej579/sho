@@ -14,13 +14,16 @@
   text-align: center;
 }
 .our_team_32 {
-  font-size: 32pt; color: $our_team_32;
-  font-family: 'Myriad_Pro', sans-serif;
+  font-size: 32pt;
+  color: $our_team_32;
+  @include ff-m_p;
 }
 .our_team_16 {
-  font-size: 16pt; color: $our_team_16;
-  font-family: 'Myriad_Pro', sans-serif;
+  font-size: 16pt;
+  color: $our_team_16;
+  @include ff-m_p;
 }
+
 /*--3 person------------------------------------------------------*/
 .team_wrapper-include {
   width: 100%;
@@ -32,16 +35,16 @@
   text-align: center;
   margin: auto;
 }
-.team_wrapper_left, .team_wrapper_right {
-  padding-top: 200px;
-}
+.team_wrapper_left, .team_wrapper_right {padding-top: 200px;}
 .team_master {
-  font-size: 24pt; color: $team_master;
-  font-family: 'Myriad_Pro', sans-serif;
+  font-size: 24pt;
+  color: $team_master;
+  @include ff-m_p;
 }
 .team_soft {
-  font-size: 13pt; color: $team_soft;
-  font-family: 'Myriad_Pro', sans-serif;
+  font-size: 13pt;
+  color: $team_soft;
+  @include ff-m_p;
 }
 .twitter, .instagram {color: $twitter_instagram;}
 .twitter:hover, .instagram:hover {color: $twitter_instagram-hover;}

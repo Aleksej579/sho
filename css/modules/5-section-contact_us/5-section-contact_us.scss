@@ -16,14 +16,17 @@
   text-align: center;
 }
 .contact_us_32 {
-  font-size: 32pt; color: black;
-  font-family: 'Myriad_Pro', sans-serif;
+  font-size: 32pt;
+  color: $contact_us_32;
+  @include ff-m_p;
 }
 .contact_us_16 {
-  font-size: 16pt; color: $contact_us_16;
-  font-family: 'Myriad_Pro', sans-serif;
+  font-size: 16pt;
+  color: $contact_us_16;
+  @include ff-m_p;
 }
-/*--3 moment------------------------------------------------------*/
+
+/*--3 moment-----------------------------------*/
 .contact_us_wrapper {
   width: 766px;
   margin: 0 auto;
@@ -49,7 +52,7 @@
 .contact_us_info {
   font-size: 13pt;
   color: $contact_us_info;
-  font-family: 'Myriad_Pro', sans-serif;
+  @include ff-m_p;
 }
 .form-write_to_us {
   margin-bottom: 150px;
@@ -58,19 +61,6 @@
   width: 100%;
   @include display_flex;
 }
-.write_to_us-btn {
-  height: 65px;
-  width: 766px;
-  background-color: $write_to_us-btn;
-  color: white;
-  border: none;
-  transition: 0.2s linear;
-}
-.write_to_us-btn:hover {
-  color: $write_to_us-btn;
-  border: 1px solid $write_to_us-btn;
-  background: none;
-}
 .contact_us-footer {
   height: 100px;
   width: 100%;
@@ -78,53 +68,19 @@
   color: $contact_us-footer;
   z-index: 100;
   margin-top: 200px;
-
   position: absolute;
   bottom: 0;
 }
-/*===message=============================*/
+
+/*---message--------------------------------*/
 .form-write_to_us {
   width: 766px;
   margin: 100px auto 0 auto;
 }
-.write_us {
-  height: 50px;
-  width: 100%;
-  resize: none;
-  line-height: 1.6;
-  text-align: center;
-  font-size: 15px;
-  color: $write_us;
-  margin: 0 0 20px 0;
-  outline: none;
-  background: none;
-  border: 1px solid $write_us_border;
-}
-
-.write_us:focus {
-  border-color: $write_us_focus;
-  color: $write_us_focus;
-}
-.write_us::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.write_us::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.write_us:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.write_us:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
-.write_us:focus::-webkit-input-placeholder {text-indent: 900px; transition: text-indent 0.3s ease;}
-.write_us:focus::-moz-placeholder          {text-indent: 900px; transition: text-indent 0.3s ease;}
-.write_us:focus:-moz-placeholder           {text-indent: 900px; transition: text-indent 0.3s ease;}
-.write_us:focus:-ms-input-placeholder      {text-indent: 900px; transition: text-indent 0.3s ease;}
-
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {-moz-appearance:textfield;}
+/*other code in /base/textarea...*/
 
 
-
-
-/*---@media 4к-------------------------------------------------*/
+/*---@media 4к---------------------------------------------------------*/
 @media screen and (min-width:2000px) and (max-width:4100px) {
   .section-contact_us {height: 1700px; padding-top: 100px;}
   .article-contact_us-wrapper {width: 40%;}
@@ -133,11 +89,11 @@ input[type=number] {-moz-appearance:textfield;}
   .contact_us_wrapper_left, .contact_us_wrapper_center, .contact_us_wrapper_right {transform: scale(1.5, 1.5); margin: auto;}
   .form-write_to_us {transform: scale(1.5, 1.5); margin-top: 600px;}
 }
-/*---@media desctop & pl------------------------------------*/
+/*---@media desctop & pl-------------------------------------------------*/
 @media screen and (min-width:800px) and (max-width:1200px) {
   .article-contact_us-wrapper {width: 100%;}
 }
-/*---@media mob------------------------------------*/
+/*---@media mob----------------------------------------------------------*/
 @media screen and (min-width:280px) and (max-width:800px) {
   .article-contact_us-wrapper {width: 100%;}
   .contact_us_wrapper {width: 100%;}

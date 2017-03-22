@@ -15,11 +15,11 @@
 }
 .our_credo_32 {
   font-size: 32pt; color: white;
-  font-family: 'Myriad_Pro', sans-serif;
+  @include ff-m_p;
 }
 .our_credo_16 {
   font-size: 16pt; color: $our_credo_16;
-  font-family: 'Myriad_Pro', sans-serif;
+  @include ff-m_p;
 }
 /*--3 person------------------------------------------------------*/
 .our_credo-includ_wrapper {
@@ -59,26 +59,12 @@
 .our_credo_master {
   font-size: 24pt;
   color: $our_credo_master;
-  font-family: 'Myriad_Pro', sans-serif;
+  @include ff-m_p;
 }
 .our_credo_soft {
-  font-size: 13pt; color: $our_credo_soft;
-  font-family: 'Myriad_Pro', sans-serif;
-}
-.our_credo-btn {
-  height: 65px;
-  width: 216px;
-  background-color: white;
-  border: none;
-  position: relative;
-  left: Calc(50% - 108px);
-  margin-top: 250px;
-  transition: 0.2s linear;
-}
-.our_credo-btn:hover {
-  color: white;
-  border: 1px solid white;
-  background: $our_credo-btn_hover;
+  font-size: 13pt;
+  color: $our_credo_soft;
+  @include ff-m_p;
 }
 
 /*---bacground loreum--------------------------------------------------*/

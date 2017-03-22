@@ -14,6 +14,7 @@
   padding-top: 50px;
   @include display_flex_inline;
 }
+
 /*---tabl content-------------------------------------------------*/
 .calendar_tree-wrapper > table {margin: 0 auto;}
 
@@ -22,8 +23,8 @@ td {vertical-align: top; height: 200px;}
 
 .calendar_tree-left, .calendar_tree-right {
   color: $calendar_tree-left_right;
-  font-family: 'Myriad_Pro', sans-serif;
   font-size: 15pt;
+  @include ff-m_p;
 }
 .calendar_tree-left {text-align: right;}
 .calendar_tree-right {text-align: left;}

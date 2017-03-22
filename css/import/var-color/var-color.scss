@@ -15,6 +15,7 @@ $text_white: $color-light_grey;
 
 $hovet: $color-oliv;
 
+
 $nav: $color-light_grey;
 $logo_site-beeg: $color-dark;
 $logo_site-small: $color-light_grey;
@@ -42,6 +43,7 @@ $loreum-main_text: $color-light_grey;
 $loreum-last_left: $color-dark_grey;
 $loreum-last_right: $color-dark_grey;
 
+$contact_us_32: $color-dark;
 $contact_us_16: $color-light_grey;
 $contact_us_info: $color-light_grey;
 $write_to_us-btn: $color-dark;
@@ -51,6 +53,9 @@ $write_us_border: $color-light_grey;
 $write_us_focus: $color-oliv;
 
 /*---mixin------------------------------------------------------------*/
+@mixin ff-m_p {  //@include ff-m_p;
+  font-family: 'Myriad_Pro', sans-serif;
+}
 @mixin user_select ($none) {  //user select none & all
   -webkit-user-select: $none;
   -moz-user-select: $none;
@@ -70,12 +75,11 @@ $write_us_focus: $color-oliv;
   display: -ms-flexbox;       /* TWEENER – IE 10 */
   display: -webkit-flex;      /* NEW – Chrome */
   display: flex;              /* NEW, Spec – Opera 12.1, Firefox 20+ */
-
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
-
 }
 
+/* for section 4 */
 @mixin angle($pseudo, $flip: false, $angle: 6.129deg) {
   @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
     position: relative;

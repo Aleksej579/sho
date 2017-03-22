@@ -1,0 +1,47 @@
+/*---1-section-main_start--------------------*/
+.main_start-btn {
+  color: $main_start-btn;
+  text-transform: uppercase;
+  font-size: 13pt;
+  font-family: 'Myriad_Pro', sans-serif;
+  border: 1px solid $main_start-btn;
+  background: none;
+  transition: 0.2s linear;
+  padding: 24px;
+}
+.main_start-btn:hover {
+  color: white;
+  background-color: $main_start-btn;
+}
+
+/*---4-section-our_credo--------------------*/
+.our_credo-btn {
+  height: 65px;
+  width: 216px;
+  background-color: white;
+  border: none;
+  position: relative;
+  left: Calc(50% - 108px);
+  margin-top: 250px;
+  transition: 0.2s linear;
+}
+.our_credo-btn:hover {
+  color: white;
+  border: 1px solid white;
+  background: $our_credo-btn_hover;
+}
+
+/*---5-section-contact_us--------------------*/
+.write_to_us-btn {
+  height: 65px;
+  width: 766px;
+  background-color: $write_to_us-btn;
+  color: white;
+  border: none;
+  transition: 0.2s linear;
+}
+.write_to_us-btn:hover {
+  color: $write_to_us-btn;
+  border: 1px solid $write_to_us-btn;
+  background: none;
+}

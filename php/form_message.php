@@ -1,14 +1,14 @@
 <?php
-$adminemail="name_post@gmail.com";
+$adminemail="your_mail@gmail.com";  // mail ???
 
 $date=date("d.m.y");
 $time=date("H:i");
-$backurl="you_site.com";
+$backurl="http://sho-studio.com";  // .com ????
 
 $name=$_POST['name'];
-$tel=$_POST['tel'];
 $email=$_POST['email'];
-$city=$_POST['city'];
+$number=$_POST['number'];
+$write=$_POST['write'];
 
 if (!preg_match("|^([a-z0-9_\.\-]{1,20})@([a-z0-9\.\-]{1,20})\.([a-z]{2,4})|is",
     strtolower($email)))
@@ -21,14 +21,13 @@ href='javascript:history.back(1)'><B>назад</B></a>. Вы
 else
 {
     $msg=" 
-  Имя:     $name
-  Телефон: $tel
-  E-mail:  $email
-  Город:   $city
-";
+        Имя:        $name
+        E-mail:     $email
+        Номер:      $number
+        Сообщение:  $write
+    ";
 
-    mail("$adminemail", "$date $time Сообщение 
-от $name", "$msg");
+    mail("$adminemail", "$date $time Сообщение от $name", "$msg");
 
     $f = fopen("message.txt", "a+");
     fwrite($f," \n $date $time Сообщение от $name");

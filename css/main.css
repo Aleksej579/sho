@@ -12,6 +12,7 @@
 /*---local palette--------------------------------------------------*/
 /*---global palette-------------------------------------------------*/
 /*---mixin------------------------------------------------------------*/
+/* for section 4 */
 .edge--bottom {
   position: relative;
   z-index: 1; }
@@ -59,13 +60,14 @@
 
 .article-main_start-wrapper {
   height: 100%;
+  width: 1200px;
   margin: 0 auto; }
 
 /*---navigation--------------------------------*/
 nav {
   overflow: hidden;
   width: 650px;
-  margin: 0 auto;
+  margin: auto;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -131,22 +133,7 @@ header {
   color: #b3b3b3;
   font-size: 19pt; }
 
-/*---btn-----------------------------------------*/
-.main_start-btn {
-  color: #1d1e1f;
-  text-transform: uppercase;
-  font-size: 13pt;
-  font-family: 'Myriad_Pro', sans-serif;
-  border: 1px solid #1d1e1f;
-  background: none;
-  transition: 0.2s linear;
-  padding: 24px; }
-
-.main_start-btn:hover {
-  color: white;
-  background-color: #1d1e1f; }
-
-/*---scroll----------------------------------------*/
+/*---scroll animation----------------------------------------*/
 .scroll {
   height: 110px;
   width: 10px;
@@ -199,12 +186,12 @@ header {
     transform: translateY(0px); }
   100% {
     transform: translateY(100px); } }
-/*---@media 4╨║-------------------------------------------------*/
+/*---@media 4╨║-----------------------------------------------------*/
 @media screen and (min-width: 2000px) and (max-width: 4100px) {
   .section-main_start {
     height: 1700px; } }
-/*---@media desctop & pl------------------------------------*/
-/*---@media mob------------------------------------*/
+/*---@media desctop & pl-------------------------------------------*/
+/*---@media mob----------------------------------------------------*/
 @media screen and (min-width: 280px) and (max-width: 800px) {
   .section-main_start {
     background: none; }
@@ -270,8 +257,8 @@ td {
 
 .calendar_tree-left, .calendar_tree-right {
   color: #b3b3b3;
-  font-family: 'Myriad_Pro', sans-serif;
-  font-size: 15pt; }
+  font-size: 15pt;
+  font-family: 'Myriad_Pro', sans-serif; }
 
 .calendar_tree-left {
   text-align: right; }
@@ -536,21 +523,6 @@ td {
   color: #b3b3b3;
   font-family: 'Myriad_Pro', sans-serif; }
 
-.our_credo-btn {
-  height: 65px;
-  width: 216px;
-  background-color: white;
-  border: none;
-  position: relative;
-  left: Calc(50% - 108px);
-  margin-top: 250px;
-  transition: 0.2s linear; }
-
-.our_credo-btn:hover {
-  color: white;
-  border: 1px solid white;
-  background: #1d1e1f; }
-
 /*---bacground loreum--------------------------------------------------*/
 .our_credo-loreum_wrapper {
   width: 800px;
@@ -685,7 +657,7 @@ td {
 
 .contact_us_32 {
   font-size: 32pt;
-  color: black;
+  color: #1d1e1f;
   font-family: 'Myriad_Pro', sans-serif; }
 
 .contact_us_16 {
@@ -693,7 +665,7 @@ td {
   color: #b3b3b3;
   font-family: 'Myriad_Pro', sans-serif; }
 
-/*--3 moment------------------------------------------------------*/
+/*--3 moment-----------------------------------*/
 .contact_us_wrapper {
   width: 766px;
   margin: 0 auto;
@@ -756,19 +728,6 @@ td {
   -webkit-flex-flow: row wrap;
   justify-content: space-around; }
 
-.write_to_us-btn {
-  height: 65px;
-  width: 766px;
-  background-color: #1d1e1f;
-  color: white;
-  border: none;
-  transition: 0.2s linear; }
-
-.write_to_us-btn:hover {
-  color: #1d1e1f;
-  border: 1px solid #1d1e1f;
-  background: none; }
-
 .contact_us-footer {
   height: 100px;
   width: 100%;
@@ -779,11 +738,60 @@ td {
   position: absolute;
   bottom: 0; }
 
-/*===message=============================*/
+/*---message--------------------------------*/
 .form-write_to_us {
   width: 766px;
   margin: 100px auto 0 auto; }
 
+/*other code in /base/textarea...*/
+/*---@media 4╨║---------------------------------------------------------*/
+@media screen and (min-width: 2000px) and (max-width: 4100px) {
+  .section-contact_us {
+    height: 1700px;
+    padding-top: 100px; }
+
+  .article-contact_us-wrapper {
+    width: 40%; }
+
+  .article-contact_us-wrapper > p {
+    transform: scale(1.5, 1.5);
+    margin-bottom: 100px; }
+
+  .contact_us_wrapper {
+    transform: scale(1.5, 1.5);
+    width: 100%; }
+
+  .contact_us_wrapper_left, .contact_us_wrapper_center, .contact_us_wrapper_right {
+    transform: scale(1.5, 1.5);
+    margin: auto; }
+
+  .form-write_to_us {
+    transform: scale(1.5, 1.5);
+    margin-top: 600px; } }
+/*---@media desctop & pl-------------------------------------------------*/
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  .article-contact_us-wrapper {
+    width: 100%; } }
+/*---@media mob----------------------------------------------------------*/
+@media screen and (min-width: 280px) and (max-width: 800px) {
+  .article-contact_us-wrapper {
+    width: 100%; }
+
+  .contact_us_wrapper {
+    width: 100%; }
+
+  .form-write_to_us {
+    width: 90%; }
+
+  .contact_us_wrapper_left,
+  .contact_us_wrapper_center,
+  .contact_us_wrapper_right {
+    border-bottom: 1px solid #b3b3b3; }
+
+  .form-write_to_us {
+    margin-bottom: 100px; } }
+/*base*/
+/*---5-section-contact_us-------------------------------*/
 .write_us {
   height: 50px;
   width: 100%;
@@ -841,55 +849,51 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield; }
 
-/*---@media 4╨║-------------------------------------------------*/
-@media screen and (min-width: 2000px) and (max-width: 4100px) {
-  .section-contact_us {
-    height: 1700px;
-    padding-top: 100px; }
+/*---1-section-main_start--------------------*/
+.main_start-btn {
+  color: #1d1e1f;
+  text-transform: uppercase;
+  font-size: 13pt;
+  font-family: 'Myriad_Pro', sans-serif;
+  border: 1px solid #1d1e1f;
+  background: none;
+  transition: 0.2s linear;
+  padding: 24px; }
 
-  .article-contact_us-wrapper {
-    width: 40%; }
+.main_start-btn:hover {
+  color: white;
+  background-color: #1d1e1f; }
 
-  .article-contact_us-wrapper > p {
-    transform: scale(1.5, 1.5);
-    margin-bottom: 100px; }
+/*---4-section-our_credo--------------------*/
+.our_credo-btn {
+  height: 65px;
+  width: 216px;
+  background-color: white;
+  border: none;
+  position: relative;
+  left: Calc(50% - 108px);
+  margin-top: 250px;
+  transition: 0.2s linear; }
 
-  .contact_us_wrapper {
-    transform: scale(1.5, 1.5);
-    width: 100%; }
+.our_credo-btn:hover {
+  color: white;
+  border: 1px solid white;
+  background: #1d1e1f; }
 
-  .contact_us_wrapper_left, .contact_us_wrapper_center, .contact_us_wrapper_right {
-    transform: scale(1.5, 1.5);
-    margin: auto; }
+/*---5-section-contact_us--------------------*/
+.write_to_us-btn {
+  height: 65px;
+  width: 766px;
+  background-color: #1d1e1f;
+  color: white;
+  border: none;
+  transition: 0.2s linear; }
 
-  .form-write_to_us {
-    transform: scale(1.5, 1.5);
-    margin-top: 600px; } }
-/*---@media desctop & pl------------------------------------*/
-@media screen and (min-width: 800px) and (max-width: 1200px) {
-  .article-contact_us-wrapper {
-    width: 100%; } }
-/*---@media mob------------------------------------*/
-@media screen and (min-width: 280px) and (max-width: 800px) {
-  .article-contact_us-wrapper {
-    width: 100%; }
+.write_to_us-btn:hover {
+  color: #1d1e1f;
+  border: 1px solid #1d1e1f;
+  background: none; }
 
-  .contact_us_wrapper {
-    width: 100%; }
-
-  .form-write_to_us {
-    width: 90%; }
-
-  .contact_us_wrapper_left,
-  .contact_us_wrapper_center,
-  .contact_us_wrapper_right {
-    border-bottom: 1px solid #b3b3b3; }
-
-  .form-write_to_us {
-    margin-bottom: 100px; } }
-/*base*/
-/*@import "base/textarea/textarea";
-@import "base/button/button";*/
 * {
   margin: 0;
   padding: 0; }
