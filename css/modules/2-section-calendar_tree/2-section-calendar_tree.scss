@@ -37,6 +37,11 @@ td {vertical-align: top; height: 200px;}
   top: -50px;
 }
 
+
+/*---@media 4к-------------------------------------------------*/
+@media screen and (min-width:2000px) and (max-width:4100px) {
+  .section-calendar_tree {height: 1700px;}
+}
 /*---@media desctop & pl------------------------------------*/
 @media screen and (min-width:800px) and (max-width:1200px) {
   .calendar_tree-wrapper {width: 100%; padding-top: 25px;}
@@ -45,7 +50,7 @@ td {vertical-align: top; height: 200px;}
   .calendar_tree-wrapper > table {width: 44%}
 }
 /*---@media mob------------------------------------*/
-@media screen and (min-width:320px) and (max-width:800px) {
+@media screen and (min-width:280px) and (max-width:800px) {
   .calendar_tree-wrapper {width: 100%; padding-top: 25px;}
   .calendar_tree-wrapper > table {width: 44%}
   .calendar_tree-left, .calendar_tree-right {font-size: 7pt;}
@@ -53,8 +58,9 @@ td {vertical-align: top; height: 200px;}
   .year {font-size: 15pt;}
   td {vertical-align: top; height: 110px;}
   .calendar_tree-left-min {height: 40px;}
-  .vertical {top: -25px; height: 700px;}
+  .vertical {top: -100px; height: 800px; width: 30px;}
   .section-calendar_tree {height: 700px;}
+  .delete {display: none;}
 }
 
 

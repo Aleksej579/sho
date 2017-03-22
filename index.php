@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>SHO STUDIO — Мастерская дизайна и технологий</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="ho studio, глубокое изучение, любовь к работе, грамотная реализация">
         <meta name="description" content="Творческая команда специалистов, которая занимается дизайном, разработкой веб-сайтов и продвижением. Студия ho studio основана в Харькове, в 2014 году.">
         <link rel="icon" type="image/png" href="images/favicon-16x16.png">

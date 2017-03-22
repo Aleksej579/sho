@@ -23,12 +23,13 @@
 }
 /*--3 person------------------------------------------------------*/
 .our_credo-includ_wrapper {
+  width: 100%;
   @include display_flex;
 }
 .our_credo_wrapper_left,
 .our_credo_wrapper_center,
 .our_credo_wrapper_right {
-  width: 330px;
+  width: 30%;
   height: 380px;
   padding-top: 100px;
   text-align: center;
@@ -110,6 +111,16 @@
 }
 
 
+
+/*---@media 4к-------------------------------------------------*/
+@media screen and (min-width:2000px) and (max-width:4100px) {
+  .section-our_credo {height: 1800px;}
+  .article-our_credo-wrapper {width: 50%;}
+  .article-our_credo-wrapper > p {transform: scale(1.5, 1.5); margin-bottom: 100px;}
+  .our_credo_wrapper_left, .our_credo_wrapper_center, .our_credo_wrapper_right {transform: scale(1.5, 1.5); padding-top: 150px; padding-bottom: 150px;}
+  .our_credo-loreum_wrapper {transform: scale(1.5, 1.5);}
+  .our_credo-btn {transform: scale(1.5, 1.5);}
+}
 /*---@media desctop & pl------------------------------------*/
 @media screen and (min-width:800px) and (max-width:1200px) {
   .article-our_credo-wrapper {width: 100%;}
@@ -118,13 +129,17 @@
   .our_credo-loreum_wrapper > .gradient {width: 100%; height: 500px;}
   .our_credo-loreum_wrapper > p {font-size: 12px;}
 }
-/*---@media mob------------------------------------*/
-@media screen and (min-width:320px) and (max-width:800px) {
-  .article-our_credo-wrapper {width: 100%;}
+/*---@media mob-----------------------------------------------------------------*/
+@media screen and (min-width:280px) and (max-width:800px) {
+  .section-our_credo {height: 1800px;}
+  .article-our_credo-wrapper {width: 90%;}
+  /*.our_credo-includ_wrapper {width: 100%;}*/
   .our_credo-circle_heart, .our_credo-circle_graph, .our_credo-circle_cloud {height: 100px; width: 100px; border: 5px solid white; border-radius: 55px;}
   .our_credo-circle_heart:hover, .our_credo-circle_graph:hover, .our_credo-circle_cloud:hover {transform-origin: 50px 50px 0;}
-  .our_credo_wrapper_left, .our_credo_wrapper_center, .our_credo_wrapper_right {width: 330px; height: 270px; padding-top: 50px; z-index: 200;}
-  .section-our_credo {height: 1800px;}
+  .our_credo_wrapper_left, .our_credo_wrapper_center, .our_credo_wrapper_right {width: 330px; height: 270px; padding-top: 100px;}
+  .delete {display: none;}
+  .our_credo_32 {font-size: 21pt;}
+  .our_credo_16 {font-size: 10pt;}
   .our_credo-loreum_wrapper {width: 80%; margin: 0 auto;}
   .our_credo-loreum_wrapper > .gradient {display: none;}
   .our_credo-loreum_wrapper > p {display: none;}

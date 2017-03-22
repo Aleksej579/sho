@@ -4,18 +4,24 @@
     <div class="contact_us_wrapper">
         <div class="contact_us_wrapper_left">
             <div class="contact_us-circle_telephone"></div><br><br>
-            <p><span class="contact_us_info">Нет, звонить совсем<br>
-                не обязательно</span><br><br></p>
+            <p><span class="contact_us_info">
+                    Нет, звонить совсем<br>
+                    не обязательно</span><br><br>
+            </p>
         </div>
         <div class="contact_us_wrapper_center">
             <div class="contact_us-circle_geolocation"></div><br><br>
-            <p><span class="contact_us_info">Но есть шанс попасть<br>
-                на собеседование</span><br><br></p>
+            <p><span class="contact_us_info">
+                    Но есть шанс попасть<br>
+                    на собеседование</span><br><br>
+            </p>
         </div>
         <div class="contact_us_wrapper_right">
             <div class="contact_us-circle_message"></div><br><br>
-            <p><span class="contact_us_info">Пришлите нам письмо с резюме<br>
-                и выполненным текстовым заданием</span><br><br></p>
+            <p><span class="contact_us_info">
+                    Пришлите нам письмо с резюме<br>
+                    и выполненным текстовым заданием</span><br><br>
+            </p>
         </div>
     </div>
     <form action="/php/form_message.php" method="POST" class="form-write_to_us">

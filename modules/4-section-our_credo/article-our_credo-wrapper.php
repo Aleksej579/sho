@@ -1,33 +1,40 @@
 <article class="article-our_credo-wrapper">
-    <p><span class="our_credo_32">Наша команда</span><br>
-        <span class="our_credo_16">Конечно же, это не правда</span></p>
+    <!-- title of the page -->
+    <p><span class="our_credo_32">Чем мы руководствуемся</span><br>
+        <span class="our_credo_16">Каких убеждений мы придерживаемся в нашей работе</span></p>
+    <!-- main info of the page -->
     <div class="our_credo-includ_wrapper">
         <div class="our_credo_wrapper_left">
             <div class="our_credo-circle_graph"></div><br><br>
             <p><span class="our_credo_master">Глубокое изучение</span><br><br>
-                <span class="our_credo_soft">В своей работе мы руководствуемся<br>
-                    правилом: самими стать клиентами и<br>
-                    правильно сформулировать задачу,<br>
-                    чтобы результат превзошол все<br>
-                    ожидания.</span><br><br></p>
+                <span class="our_credo_soft">
+                    В своей работе мы руководствуемся правилом:<br class="delete">
+                    самими стать клиентами и правильно сформулировать задачу,<br class="delete">
+                    чтобы результат превзошол все ожидания.
+                </span><br><br></p>
         </div>
         <div class="our_credo_wrapper_center">
             <div class="our_credo-circle_heart"></div><br><br>
             <p><span class="our_credo_master">Любовь к работе</span><br><br>
-                <span class="our_credo_soft">Мы по-настоящему любим то, что<br>
-                    делаем. Это то - что, отличает нас от<br>
-                    абсолютного большинства на рынке.</span><br><br></p>
+                <span class="our_credo_soft">
+                    Мы по-настоящему любим то, что делаем.<br class="delete">
+                    Это то - что, отличает нас<br class="delete">
+                    от абсолютного большинства на рынке.
+                </span><br><br></p>
         </div>
         <div class="our_credo_wrapper_right">
             <div class="our_credo-circle_cloud"></div><br><br>
             <p><span class="our_credo_master">Грамотная реализация</span><br><br>
-                <span class="our_credo_soft">Для нас, проектирование и реализация<br>
-                    - взаимно не заменямые понятия.<br>
-                    Последующий результат всегда лучше<br>
-                    запланированного. Точка.</span><br><br></p>
+                <span class="our_credo_soft">
+                    Для нас, проектирование и реализация<br class="delete">
+                    - взаимно не заменямые понятия.<br class="delete">
+                    Последующий результат всегда лучше запланированного.<br class="delete">
+                    Точка.
+                </span><br><br></p>
         </div>
     </div>
     <div style="clear:both;"></div>
+    <!-- background of the page -->
     <div class="our_credo-loreum_wrapper">
         <p>
             <?php

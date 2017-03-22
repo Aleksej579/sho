@@ -48,12 +48,21 @@
 
 
 
+/*---@media 4к-------------------------------------------------*/
+@media screen and (min-width:2000px) and (max-width:4100px) {
+  .section-our_team {height: 1700px;}
+  .article-our_team-wrapper {width: 50%;}
+  .team_wrapper-include {height: 800px; position: relative; top: Calc(40% - 400px);}
+  .team_wrapper_left, .team_wrapper_center, .team_wrapper_right {transform: scale(1.5, 1.5);}
+  .article-our_team-wrapper > p {transform: scale(1.5, 1.5);}
+}
 /*---@media desctop & pl------------------------------------*/
 @media screen and (min-width:800px) and (max-width:1200px) {
   .article-our_team-wrapper {width: 100%;}
 }
 /*---@media mob------------------------------------*/
-@media screen and (min-width:320px) and (max-width:800px) {
+@media screen and (min-width:280px) and (max-width:800px) {
   .article-our_team-wrapper {width: 100%; padding-top: 25px;}
   .team_wrapper_left, .team_wrapper_right { padding-top: 0;}
+  .section-our_team {height: 1100px;}
 }

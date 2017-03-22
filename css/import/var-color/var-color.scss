@@ -58,21 +58,24 @@ $write_us_focus: $color-oliv;
   user-select: $none;
 }
 @mixin display_flex_inline {  //@include display_flex_inline;
-  display: flex;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+  display: flex;
 }
 @mixin display_flex {  //@include display_flex;
-  display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+  display: -webkit-box;       /*OLD – iOS 6-, Safari 3.1-6*/
+  display: -moz-box;          /*OLD – Firefox 19- (buggy but mostly works)*/
+  display: -ms-flexbox;       /* TWEENER – IE 10 */
+  display: -webkit-flex;      /* NEW – Chrome */
+  display: flex;              /* NEW, Spec – Opera 12.1, Firefox 20+ */
+
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+
 }
+
 @mixin angle($pseudo, $flip: false, $angle: 6.129deg) {
   @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
     position: relative;

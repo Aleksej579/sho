@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*import*/
 @font-face {
   font-family: 'Myriad_Pro';
@@ -57,7 +58,6 @@
   background-size: cover; }
 
 .article-main_start-wrapper {
-  width: 1200px;
   height: 100%;
   margin: 0 auto; }
 
@@ -73,11 +73,16 @@ nav {
 
 nav ul {
   list-style: none;
-  display: flex;
   display: -webkit-box;
+  /*OLD тАУ iOS 6-, Safari 3.1-6*/
   display: -moz-box;
+  /*OLD тАУ Firefox 19- (buggy but mostly works)*/
   display: -ms-flexbox;
+  /* TWEENER тАУ IE 10 */
   display: -webkit-flex;
+  /* NEW тАУ Chrome */
+  display: flex;
+  /* NEW, Spec тАУ Opera 12.1, Firefox 20+ */
   -webkit-flex-flow: row wrap;
   justify-content: space-around; }
 
@@ -194,17 +199,44 @@ header {
     transform: translateY(0px); }
   100% {
     transform: translateY(100px); } }
+/*---@media 4╨║-------------------------------------------------*/
+@media screen and (min-width: 2000px) and (max-width: 4100px) {
+  .section-main_start {
+    height: 1700px; } }
 /*---@media desctop & pl------------------------------------*/
 /*---@media mob------------------------------------*/
-@media screen and (min-width: 320px) and (max-width: 800px) {
+@media screen and (min-width: 280px) and (max-width: 800px) {
+  .section-main_start {
+    background: none; }
+
   .article-main_start-wrapper {
     width: 100%; }
 
+  header {
+    height: Calc(100% - 300px); }
+
   nav {
+    width: 100%;
+    margin-left: 170px;
+    border-left: 1px solid #b3b3b3; }
+
+  .nav_img {
+    display: none; }
+
+  nav ul {
+    display: inline-block;
     width: 100%; }
 
-  .section-main_start {
-    background: none; } }
+  nav ul li {
+    width: 100%;
+    margin: 10px 100px 10px 10px; }
+
+  nav ul li a {
+    width: 100%; }
+
+  nav ul li a:hover {
+    background-color: #b3b3b3;
+    color: white; } }
 .section-calendar_tree {
   height: 1330px;
   width: 100%;
@@ -219,11 +251,11 @@ header {
   height: 1330px;
   margin: 0 auto;
   padding-top: 50px;
-  display: flex;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex; }
+  display: -webkit-flex;
+  display: flex; }
 
 /*---tabl content-------------------------------------------------*/
 .calendar_tree-wrapper > table {
@@ -263,6 +295,10 @@ td {
   position: relative;
   top: -50px; }
 
+/*---@media 4╨║-------------------------------------------------*/
+@media screen and (min-width: 2000px) and (max-width: 4100px) {
+  .section-calendar_tree {
+    height: 1700px; } }
 /*---@media desctop & pl------------------------------------*/
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .calendar_tree-wrapper {
@@ -279,7 +315,7 @@ td {
   .calendar_tree-wrapper > table {
     width: 44%; } }
 /*---@media mob------------------------------------*/
-@media screen and (min-width: 320px) and (max-width: 800px) {
+@media screen and (min-width: 280px) and (max-width: 800px) {
   .calendar_tree-wrapper {
     width: 100%;
     padding-top: 25px; }
@@ -304,11 +340,15 @@ td {
     height: 40px; }
 
   .vertical {
-    top: -25px;
-    height: 700px; }
+    top: -100px;
+    height: 800px;
+    width: 30px; }
 
   .section-calendar_tree {
-    height: 700px; } }
+    height: 700px; }
+
+  .delete {
+    display: none; } }
 .section-our_team {
   height: 1000px;
   width: 100%;
@@ -337,11 +377,16 @@ td {
 /*--3 person------------------------------------------------------*/
 .team_wrapper-include {
   width: 100%;
-  display: flex;
   display: -webkit-box;
+  /*OLD тАУ iOS 6-, Safari 3.1-6*/
   display: -moz-box;
+  /*OLD тАУ Firefox 19- (buggy but mostly works)*/
   display: -ms-flexbox;
+  /* TWEENER тАУ IE 10 */
   display: -webkit-flex;
+  /* NEW тАУ Chrome */
+  display: flex;
+  /* NEW, Spec тАУ Opera 12.1, Firefox 20+ */
   -webkit-flex-flow: row wrap;
   justify-content: space-around; }
 
@@ -370,18 +415,39 @@ td {
 .twitter:hover, .instagram:hover {
   color: #d8ec54; }
 
+/*---@media 4╨║-------------------------------------------------*/
+@media screen and (min-width: 2000px) and (max-width: 4100px) {
+  .section-our_team {
+    height: 1700px; }
+
+  .article-our_team-wrapper {
+    width: 50%; }
+
+  .team_wrapper-include {
+    height: 800px;
+    position: relative;
+    top: Calc(40% - 400px); }
+
+  .team_wrapper_left, .team_wrapper_center, .team_wrapper_right {
+    transform: scale(1.5, 1.5); }
+
+  .article-our_team-wrapper > p {
+    transform: scale(1.5, 1.5); } }
 /*---@media desctop & pl------------------------------------*/
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .article-our_team-wrapper {
     width: 100%; } }
 /*---@media mob------------------------------------*/
-@media screen and (min-width: 320px) and (max-width: 800px) {
+@media screen and (min-width: 280px) and (max-width: 800px) {
   .article-our_team-wrapper {
     width: 100%;
     padding-top: 25px; }
 
   .team_wrapper_left, .team_wrapper_right {
-    padding-top: 0; } }
+    padding-top: 0; }
+
+  .section-our_team {
+    height: 1100px; } }
 .section-our_credo {
   height: 1330px;
   width: 100%;
@@ -409,18 +475,24 @@ td {
 
 /*--3 person------------------------------------------------------*/
 .our_credo-includ_wrapper {
-  display: flex;
+  width: 100%;
   display: -webkit-box;
+  /*OLD тАУ iOS 6-, Safari 3.1-6*/
   display: -moz-box;
+  /*OLD тАУ Firefox 19- (buggy but mostly works)*/
   display: -ms-flexbox;
+  /* TWEENER тАУ IE 10 */
   display: -webkit-flex;
+  /* NEW тАУ Chrome */
+  display: flex;
+  /* NEW, Spec тАУ Opera 12.1, Firefox 20+ */
   -webkit-flex-flow: row wrap;
   justify-content: space-around; }
 
 .our_credo_wrapper_left,
 .our_credo_wrapper_center,
 .our_credo_wrapper_right {
-  width: 330px;
+  width: 30%;
   height: 380px;
   padding-top: 100px;
   text-align: center;
@@ -513,6 +585,28 @@ td {
   color: #464646;
   float: right; }
 
+/*---@media 4╨║-------------------------------------------------*/
+@media screen and (min-width: 2000px) and (max-width: 4100px) {
+  .section-our_credo {
+    height: 1800px; }
+
+  .article-our_credo-wrapper {
+    width: 50%; }
+
+  .article-our_credo-wrapper > p {
+    transform: scale(1.5, 1.5);
+    margin-bottom: 100px; }
+
+  .our_credo_wrapper_left, .our_credo_wrapper_center, .our_credo_wrapper_right {
+    transform: scale(1.5, 1.5);
+    padding-top: 150px;
+    padding-bottom: 150px; }
+
+  .our_credo-loreum_wrapper {
+    transform: scale(1.5, 1.5); }
+
+  .our_credo-btn {
+    transform: scale(1.5, 1.5); } }
 /*---@media desctop & pl------------------------------------*/
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .article-our_credo-wrapper {
@@ -531,11 +625,15 @@ td {
 
   .our_credo-loreum_wrapper > p {
     font-size: 12px; } }
-/*---@media mob------------------------------------*/
-@media screen and (min-width: 320px) and (max-width: 800px) {
-  .article-our_credo-wrapper {
-    width: 100%; }
+/*---@media mob-----------------------------------------------------------------*/
+@media screen and (min-width: 280px) and (max-width: 800px) {
+  .section-our_credo {
+    height: 1800px; }
 
+  .article-our_credo-wrapper {
+    width: 90%; }
+
+  /*.our_credo-includ_wrapper {width: 100%;}*/
   .our_credo-circle_heart, .our_credo-circle_graph, .our_credo-circle_cloud {
     height: 100px;
     width: 100px;
@@ -548,11 +646,16 @@ td {
   .our_credo_wrapper_left, .our_credo_wrapper_center, .our_credo_wrapper_right {
     width: 330px;
     height: 270px;
-    padding-top: 50px;
-    z-index: 200; }
+    padding-top: 100px; }
 
-  .section-our_credo {
-    height: 1800px; }
+  .delete {
+    display: none; }
+
+  .our_credo_32 {
+    font-size: 21pt; }
+
+  .our_credo_16 {
+    font-size: 10pt; }
 
   .our_credo-loreum_wrapper {
     width: 80%;
@@ -574,7 +677,7 @@ td {
   margin: 0 auto;
   padding-top: 300px;
   position: relative;
-  min-height: 100%; }
+  min-height: 120%; }
 
 .article-contact_us-wrapper > p {
   margin: 0 auto;
@@ -594,11 +697,16 @@ td {
 .contact_us_wrapper {
   width: 766px;
   margin: 0 auto;
-  display: flex;
   display: -webkit-box;
+  /*OLD тАУ iOS 6-, Safari 3.1-6*/
   display: -moz-box;
+  /*OLD тАУ Firefox 19- (buggy but mostly works)*/
   display: -ms-flexbox;
+  /* TWEENER тАУ IE 10 */
   display: -webkit-flex;
+  /* NEW тАУ Chrome */
+  display: flex;
+  /* NEW, Spec тАУ Opera 12.1, Firefox 20+ */
   -webkit-flex-flow: row wrap;
   justify-content: space-around; }
 
@@ -630,13 +738,21 @@ td {
   color: #b3b3b3;
   font-family: 'Myriad_Pro', sans-serif; }
 
+.form-write_to_us {
+  margin-bottom: 150px; }
+
 .form-write_to_us-btn_wrapper {
   width: 100%;
-  display: flex;
   display: -webkit-box;
+  /*OLD тАУ iOS 6-, Safari 3.1-6*/
   display: -moz-box;
+  /*OLD тАУ Firefox 19- (buggy but mostly works)*/
   display: -ms-flexbox;
+  /* TWEENER тАУ IE 10 */
   display: -webkit-flex;
+  /* NEW тАУ Chrome */
+  display: flex;
+  /* NEW, Spec тАУ Opera 12.1, Firefox 20+ */
   -webkit-flex-flow: row wrap;
   justify-content: space-around; }
 
@@ -725,12 +841,36 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield; }
 
+/*---@media 4╨║-------------------------------------------------*/
+@media screen and (min-width: 2000px) and (max-width: 4100px) {
+  .section-contact_us {
+    height: 1700px;
+    padding-top: 100px; }
+
+  .article-contact_us-wrapper {
+    width: 40%; }
+
+  .article-contact_us-wrapper > p {
+    transform: scale(1.5, 1.5);
+    margin-bottom: 100px; }
+
+  .contact_us_wrapper {
+    transform: scale(1.5, 1.5);
+    width: 100%; }
+
+  .contact_us_wrapper_left, .contact_us_wrapper_center, .contact_us_wrapper_right {
+    transform: scale(1.5, 1.5);
+    margin: auto; }
+
+  .form-write_to_us {
+    transform: scale(1.5, 1.5);
+    margin-top: 600px; } }
 /*---@media desctop & pl------------------------------------*/
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .article-contact_us-wrapper {
     width: 100%; } }
 /*---@media mob------------------------------------*/
-@media screen and (min-width: 320px) and (max-width: 800px) {
+@media screen and (min-width: 280px) and (max-width: 800px) {
   .article-contact_us-wrapper {
     width: 100%; }
 
@@ -743,7 +883,10 @@ input[type=number] {
   .contact_us_wrapper_left,
   .contact_us_wrapper_center,
   .contact_us_wrapper_right {
-    border-bottom: 1px solid #b3b3b3; } }
+    border-bottom: 1px solid #b3b3b3; }
+
+  .form-write_to_us {
+    margin-bottom: 100px; } }
 /*base*/
 /*@import "base/textarea/textarea";
 @import "base/button/button";*/
